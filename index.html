@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agnt — agent orchestras in your terminal</title>
+<meta name="description" content="agnt is a coding agent that lives in your terminal. One binary for Linux and Windows, any model, and whole teams of agents working at once.">
+<meta name="theme-color" content="#15110E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="agnt — agent orchestras in your terminal">
+<meta property="og:description" content="A terminal coding agent that batches, parallelizes, caches, and conducts teams of agents.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315110E'/%3E%3Cpath d='M16 6l9 10-9 10-9-10z' fill='%23D97757'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<main class="page">
+
+<section class="hero" aria-label="agnt">
+<h1 class="sr">agnt: agent orchestras in your terminal</h1>
+<div class="banner" role="img" aria-label="agnt"><span style="color: #D97757">                     __</span><span style="color: #DD8261">  ____ _____ _____  / /_</span><span style="color: #E28E6B"> / __ `/ __ `/ __ \/ __/</span><span style="color: #E79975">/ /_/ / /_/ / / / / /_</span><span style="color: #EBA57F">\__,_/\__, /_/ /_/\__/</span><span style="color: #F0B089">     /____/</span></div>
+<a class="hint" href="#overture"><span>scroll</span><span class="hint-line" aria-hidden="true"><span class="hint-dot"></span></span></a>
+</section>
+
+<div class="wrap">
+<div class="score">
+<span class="bend-a" aria-hidden="true"></span>
+<span class="bend-b" aria-hidden="true"></span>
+<div class="spine" aria-hidden="true"><div class="spine-fill"></div></div>
+
+<section class="mv" id="overture" aria-labelledby="t-overture">
+<span class="node" aria-hidden="true"></span>
+<p class="mlabel"><span class="n">01</span><span>overture</span></p>
+<h2 class="big" id="t-overture">agent orchestras in your terminal<span class="dot">.</span></h2>
+<p class="lede">agnt is a coding agent that lives in your terminal. It ships as one binary for Linux and Windows, runs on whichever model you point it at, and can split a task across a whole team of agents working at once.</p>
+<div class="inst">
+<div class="inst-top">
+<div class="os" role="group" aria-label="Operating system">
+<button type="button" class="osb" data-os="linux" aria-pressed="true">Linux</button>
+<button type="button" class="osb" data-os="windows" aria-pressed="false">Windows</button>
+</div>
+<button type="button" class="copy" data-copy><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="4.5" y="4.5" width="8" height="8" rx="1"></rect><path d="M9.5 2.5v-1h-8v8h1"></path></svg><span data-copy-label>Copy</span></button>
+</div>
+<div class="cmd" tabindex="0" role="region" aria-label="Install command"><code><span class="pr" aria-hidden="true">$ </span><span data-cmd>curl -fsSL https://raw.githubusercontent.com/mozzarellabio/agnt/main/install.sh | sh</span></code></div>
+</div>
+<p class="osnote" data-osnote>Run in any shell. Installs the agnt binary for Linux.</p>
+</section>
+
+<section class="mv" aria-labelledby="t-eco">
+<span class="node" aria-hidden="true"></span>
+<p class="mlabel"><span class="n">02</span><span>request economy</span></p>
+<h2 class="h" id="t-eco">Same result, fewer round-trips.</h2>
+<p class="lede">Every request to a model costs you time and money. agnt is built to make fewer of them: tool calls are batched, files are read in parallel, the stable part of the prompt is cached, and long context is compacted before it overflows.</p>
+<div class="dgrid eco" role="img" aria-label="Diagram: one tool call per request takes many round-trips; agnt batches the same work into a few.">
+<div class="who"><span class="branch" aria-hidden="true"></span><span class="nm">turn by turn</span><span class="rl">one tool call per request</span></div>
+<div class="track"><span class="staff"></span><div class="bars">
+<span class="bar" style="left: 0%; width: 6%; background: #8A7A6D"></span><span class="seg-l" style="left: 0%">read</span>
+<span class="bar" style="left: 10.5%; width: 6%; background: #8A7A6D"></span><span class="seg-l" style="left: 10.5%">read</span>
+<span class="bar" style="left: 21%; width: 6%; background: #8A7A6D"></span><span class="seg-l" style="left: 21%">grep</span>
+<span class="bar" style="left: 31.5%; width: 6%; background: #8A7A6D"></span><span class="seg-l" style="left: 31.5%">read</span>
+<span class="bar" style="left: 42%; width: 6%; background: #8A7A6D"></span><span class="seg-l" style="left: 42%">edit</span>
+<span class="bar" style="left: 52.5%; width: 6%; background: #8A7A6D"></span><span class="seg-l" style="left: 52.5%">read</span>
+<span class="bar" style="left: 63%; width: 6%; background: #8A7A6D"></span><span class="seg-l" style="left: 63%">edit</span>
+<span class="bar" style="left: 73.5%; width: 6%; background: #8A7A6D"></span><span class="seg-l" style="left: 73.5%">edit</span>
+<span class="bar" style="left: 84%; width: 6%; background: #8A7A6D"></span><span class="seg-l" style="left: 84%">test</span>
+</div></div>
+<div class="who"><span class="branch" aria-hidden="true"></span><span class="nm">agnt</span><span class="rl">batched, parallel, cached</span></div>
+<div class="track"><span class="staff"></span><div class="bars">
+<span class="bar" style="left: 0%; width: 15%; background: #D97757"></span><span class="seg-l" style="left: 0%">read ×4 · grep</span>
+<span class="bar" style="left: 20%; width: 11%; background: #E28E6B"></span><span class="seg-l" style="left: 20%">edit ×3</span>
+<span class="bar" style="left: 36%; width: 6%; background: #F0B089"></span><span class="seg-l" style="left: 36%">test</span>
+</div></div>
+<div class="overlay" aria-hidden="true"><span class="ph"></span></div>
+<p class="cap">Each block is one API round-trip. Illustrative, not a benchmark.</p>
+</div>
+<div class="mech">
+<div><h3>batched tools</h3><p>Several tool calls travel in one request instead of one request each.</p></div>
+<div><h3>parallel reads</h3><p>Files load side by side, not one turn at a time.</p></div>
+<div><h3>prompt caching</h3><p>The part of the prompt that doesn’t change is cached, so repeats cost less.</p></div>
+<div><h3>context compaction</h3><p>Long sessions are condensed before they overflow, keeping what still matters.</p></div>
+</div>
+</section>
+
+<section class="mv" aria-labelledby="t-ens">
+<span class="node" aria-hidden="true"></span>
+<p class="mlabel"><span class="n">03</span><span>ensemble</span></p>
+<h2 class="h" id="t-ens">One command. Five players.</h2>
+<div class="cmdline"><span aria-hidden="true">›</span>/team squad</div>
+<p class="lede">That seats a lead with an architect, a coder, a reviewer and a tester. They work at the same time, each on its own part, and the lead brings it back together.</p>
+<p class="lede">You can talk to any of them mid-run: redirect the coder, question the reviewer, without stopping the rest.</p>
+<div class="dgrid ens" role="img" aria-label="Diagram: five agents working in parallel lanes over time. The lead splits and merges, the architect plans, the coder builds, the reviewer and tester work alongside, and you step in mid-run to talk to the reviewer.">
+<div class="who"><span class="branch" aria-hidden="true"></span><span class="nm">lead</span><span class="rl">splits, assigns, merges</span></div>
+<div class="track"><span class="staff"></span><div class="bars">
+<span class="bar" style="left: 0%; width: 8%; background: #D97757"></span>
+<span class="bar" style="left: 45%; width: 3%; background: #D97757"></span>
+<span class="bar" style="left: 87%; width: 13%; background: #D97757"></span>
+</div></div>
+<div class="who"><span class="branch" aria-hidden="true"></span><span class="nm">architect</span><span class="rl">reads the code, writes the plan</span></div>
+<div class="track"><span class="staff"></span><div class="bars">
+<span class="bar" style="left: 5%; width: 24%; background: #DD8261"></span>
+</div></div>
+<div class="who"><span class="branch" aria-hidden="true"></span><span class="nm">coder</span><span class="rl">implements</span></div>
+<div class="track"><span class="staff"></span><div class="bars">
+<span class="bar" style="left: 24%; width: 32%; background: #E28E6B"></span>
+<span class="bar" style="left: 62%; width: 22%; background: #E28E6B"></span>
+</div></div>
+<div class="who"><span class="branch" aria-hidden="true"></span><span class="nm">reviewer</span><span class="rl">reads diffs as they land</span></div>
+<div class="track"><span class="staff"></span><div class="bars">
+<span class="bar" style="left: 38%; width: 10%; background: #E79975"></span>
+<span class="bar" style="left: 60%; width: 12%; background: #E79975"></span>
+<span class="bar" style="left: 80%; width: 9%; background: #E79975"></span>
+</div></div>
+<div class="who"><span class="branch" aria-hidden="true"></span><span class="nm">tester</span><span class="rl">writes and runs tests</span></div>
+<div class="track"><span class="staff"></span><div class="bars">
+<span class="bar" style="left: 34%; width: 22%; background: #F0B089"></span>
+<span class="bar" style="left: 70%; width: 24%; background: #F0B089"></span>
+</div></div>
+<div class="overlay" aria-hidden="true"><span class="you"><span>you → reviewer</span></span><span class="ph"></span></div>
+<div class="axis" aria-hidden="true"><span>start</span><i></i><span>merged</span></div>
+</div>
+</section>
+
+<section class="mv" aria-labelledby="t-models">
+<span class="node" aria-hidden="true"></span>
+<p class="mlabel"><span class="n">04</span><span>instruments</span></p>
+<h2 class="h" id="t-models">Any model. Your own keys.</h2>
+<p class="lede">Bring a key for the provider you already use, or keep everything on your machine with Ollama or LM Studio.</p>
+<div class="roster">
+<div><span class="p">Anthropic</span><span class="k">hosted</span></div>
+<div><span class="p">OpenAI</span><span class="k">hosted</span></div>
+<div><span class="p">OpenRouter</span><span class="k">hosted</span></div>
+<div><span class="p">Gemini</span><span class="k">hosted</span></div>
+<div><span class="p">DeepSeek</span><span class="k">hosted</span></div>
+<div><span class="p">Groq</span><span class="k">hosted</span></div>
+<div><span class="p">xAI</span><span class="k">hosted</span></div>
+<div><span class="p">Mistral</span><span class="k">hosted</span></div>
+<div class="loc"><span class="p">Ollama</span><span class="k">local</span></div>
+<div class="loc"><span class="p">LM Studio</span><span class="k">local</span></div>
+</div>
+</section>
+
+<section class="mv" aria-labelledby="t-room">
+<span class="node" aria-hidden="true"></span>
+<p class="mlabel"><span class="n">05</span><span>the room</span></p>
+<h2 class="h" id="t-room">A terminal UI, made by hand.</h2>
+<p class="lede">Eleven skins, four working modes, undo and rewind, drawn for the terminal rather than ported to it. Switch the mode and skin below and watch what agnt does next.</p>
+<div class="term" data-skin="clay" id="term">
+<div class="term-top"><b>agnt</b><span>~/code/shop</span><span class="r">skin: <span id="skin-name">clay</span></span></div>
+<div class="term-body">
+<p class="tl"><span class="t-acc">›</span> add rate limiting to the login route</p>
+<p class="tl t-dim">  read  src/routes/login.ts · src/middleware/session.ts · src/config.ts</p>
+<p class="tl t-dim">  grep  "rateLimit" in src/</p>
+<p class="tl">  Token bucket per client IP, checked before the session lookup.</p>
+<p class="tl"><span class="t-acc">  + src/middleware/ratelimit.ts</span></p>
+<p class="tl">  ~ src/routes/login.ts</p>
+<p class="tl t-dim">  diagnostics  tsc: no errors · verified: bun test</p>
+<p class="tl t-hint" aria-live="polite">  <span id="mode-hint">plan ready: 2 files. approve to start.</span></p>
+</div>
+<div class="term-status"><span class="t-mode" id="mode-name">plan</span><span>ollama · qwen2.5-coder</span><span>req 3 · cache 62%</span><span class="r">/undo ready</span></div>
+</div>
+<div class="ctls">
+<div class="ctl"><span class="ctl-l" id="l-mode">mode</span><div class="seg" role="group" aria-labelledby="l-mode">
+<button type="button" class="segb" data-mode="ask" aria-pressed="false">ask</button><button type="button" class="segb" data-mode="auto" aria-pressed="false">auto</button><button type="button" class="segb" data-mode="plan" aria-pressed="true">plan</button><button type="button" class="segb" data-mode="free" aria-pressed="false">free</button>
+</div></div>
+<div class="ctl"><span class="ctl-l" id="l-skin">skin</span><div class="seg" role="group" aria-labelledby="l-skin">
+<button type="button" class="segb" data-skin="clay" aria-pressed="true"><span class="sw sw-clay" aria-hidden="true"></span>clay</button><button type="button" class="segb" data-skin="slate" aria-pressed="false"><span class="sw sw-slate" aria-hidden="true"></span>slate</button><button type="button" class="segb" data-skin="nord" aria-pressed="false"><span class="sw sw-nord" aria-hidden="true"></span>nord</button><button type="button" class="segb" data-skin="gruvbox" aria-pressed="false"><span class="sw sw-gruvbox" aria-hidden="true"></span>gruvbox</button>
+</div></div>
+</div>
+<p class="mdesc" id="mode-desc" aria-live="polite">plan: reads and proposes; nothing changes until you approve.</p>
+<div class="mech">
+<div><h3>undo &amp; rewind</h3><p>Every edit is snapshotted. <span class="ic">/undo</span> reverts the last one, <span class="ic">/rewind</span> goes back further.</p></div>
+<div><h3>worktrees</h3><p><span class="ic">/worktree</span> gives a task its own branch checkout so experiments stay off your tree.</p></div>
+<div><h3>MCP &amp; plugins</h3><p>Add MCP servers and plugins; their tools, skills and hooks join the agent’s own.</p></div>
+<div><h3>schedule &amp; loop</h3><p><span class="ic">/schedule</span> and <span class="ic">/loop</span> run prompts on a timer, with no one at the keyboard.</p></div>
+</div>
+<p class="lede">And when nobody is at the keyboard, the same agent runs headless, inside a script or a CI step.</p>
+</section>
+
+<section class="mv" aria-labelledby="t-loop">
+<span class="node" aria-hidden="true"></span>
+<p class="mlabel"><span class="n">06</span><span>closing the loop</span></p>
+<h2 class="h" id="t-loop">It checks its own work.</h2>
+<p class="lede">After every edit agnt runs the project’s checker and sees the errors before it moves on. When it thinks it’s done, it runs your typecheck or tests, and if they fail it keeps going until they pass.</p>
+<div class="mech">
+<div><h3>diagnostics on edit</h3><p>TypeScript, Python, Go and JSON are checked as each file changes, and errors land in the same turn.</p></div>
+<div><h3>verify before finishing</h3><p>The agent picks your typecheck, test or build script and runs it before it answers.</p></div>
+<div><h3>hooks</h3><p>Shell commands on <span class="ic">pre</span>, <span class="ic">post</span>, <span class="ic">prompt</span> and <span class="ic">stop</span>. A failing stop hook sends the agent back to work.</p></div>
+<div><h3>context you control</h3><p><span class="ic">/context</span> shows what fills the window; <span class="ic">/compact</span> condenses it on demand.</p></div>
+</div>
+</section>
+
+<section class="mv" aria-labelledby="t-phone">
+<span class="node" aria-hidden="true"></span>
+<p class="mlabel"><span class="n">07</span><span>remote</span></p>
+<h2 class="h" id="t-phone">Take it to your phone.</h2>
+<p class="lede">Type <span class="ic">/rc</span> and agnt shows a QR code. Scan it on the same Wi-Fi and your session opens in the browser: no app, no account, no domain. It follows your terminal’s skin.</p>
+<div class="phone">
+<ol><li><span>1</span> /rc</li><li><span>2</span> scan the code</li><li><span>3</span> chat, approve edits, stop the agent</li><li><span>·</span> /rc tunnel works away from home</li></ol>
+<div class="qr" id="qr" role="img" aria-label="Example QR code"></div>
+</div>
+</section>
+
+<section class="mv coda" aria-labelledby="t-coda">
+<span class="node" aria-hidden="true"></span>
+<p class="mlabel"><span class="n">08</span><span>coda</span></p>
+<h2 class="h" id="t-coda">Install agnt.</h2>
+<p class="lede">One binary. Add a key or point it at a local model, then type <span class="ic">/team squad</span>.</p>
+<div class="inst">
+<div class="inst-top">
+<div class="os" role="group" aria-label="Operating system">
+<button type="button" class="osb" data-os="linux" aria-pressed="true">Linux</button>
+<button type="button" class="osb" data-os="windows" aria-pressed="false">Windows</button>
+</div>
+<button type="button" class="copy" data-copy><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="4.5" y="4.5" width="8" height="8" rx="1"></rect><path d="M9.5 2.5v-1h-8v8h1"></path></svg><span data-copy-label>Copy</span></button>
+</div>
+<div class="cmd" tabindex="0" role="region" aria-label="Install command"><code><span class="pr" aria-hidden="true">$ </span><span data-cmd>curl -fsSL https://raw.githubusercontent.com/mozzarellabio/agnt/main/install.sh | sh</span></code></div>
+</div>
+<p class="osnote" data-osnote>Run in any shell. Installs the agnt binary for Linux.</p>
+<span class="end" aria-hidden="true"></span>
+</section>
+
+</div>
+</div>
+
+<footer class="foot">
+<span>agnt</span>
+<a href="https://github.com/mozzarellabio/agnt">source on GitHub</a>
+<span class="r">Linux · Windows · single binary</span>
+</footer>
+<p class="sr" id="live" aria-live="polite"></p>
+</main>
+</body>
+</html>
