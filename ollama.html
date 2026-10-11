@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Use a coding agent with Ollama or LM Studio — agnt</title>
+<meta name="description" content="Run agnt, a terminal AI coding agent, on local models with Ollama or LM Studio. No cloud key needed, with fallback to hosted models and headless mode for scripts.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#15110E">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://mozzarellabio.github.io/agnt/ollama.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="agnt">
+<meta property="og:title" content="Use a coding agent with Ollama or LM Studio — agnt">
+<meta property="og:description" content="Run agnt, a terminal AI coding agent, on local models with Ollama or LM Studio. No cloud key needed, with fallback to hosted models and headless mode for scripts.">
+<meta property="og:url" content="https://mozzarellabio.github.io/agnt/ollama.html">
+<meta property="og:image" content="https://mozzarellabio.github.io/agnt/assets/img/og-ollama.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315110E'/%3E%3Cpath d='M16 6l9 10-9 10-9-10z' fill='%23D97757'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/familjen-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"agnt","item":"https://mozzarellabio.github.io/agnt/"},{"@type":"ListItem","position":2,"name":"Local models","item":"https://mozzarellabio.github.io/agnt/ollama.html"}]}</script>
+</head>
+<body>
+<main class="page">
+<article class="doc">
+<a class="back" href="./">← agnt</a>
+<h1>Run a coding agent on local models</h1>
+<p class="lede">agnt works with Ollama and LM Studio, so your code can stay on your machine. It also supports hosted providers when you want a bigger model.</p>
+<h2 id="setup">Set up</h2>
+<ol>
+<li>Install agnt and start your local server (Ollama or LM Studio).</li>
+<li>Run <code>/model</code> and pick a local model.</li>
+<li>Use <code>/provider</code> to add any other OpenAI-compatible endpoint.</li>
+</ol>
+<h2 id="hybrid">Mix local and hosted</h2>
+<p>Use <code>/fallback</code> to name models to switch to when the current one errors or is rate-limited. Supported hosted providers: Anthropic, OpenAI, OpenRouter, Gemini, DeepSeek, Groq, xAI and Mistral.</p>
+<h2 id="safety">Keep control</h2>
+<p>Use <code>plan</code> mode to have the agent read and propose before anything changes, <code>/undo</code> and <code>/rewind</code> to roll back, and <code>/worktree</code> to work on an isolated branch.</p>
+<h2 id="automation">Scripts and CI</h2>
+<p>The same agent runs headless inside a script or CI step. See the <a href="docs.html">docs</a> for every command, or <a href="./#overture">install agnt</a>.</p>
+</article>
+<footer class="foot">
+<a href="./">agnt</a>
+<a href="docs.html">docs</a>
+<a href="ollama.html">local models</a>
+<a href="compare.html">compare</a>
+<a href="changelog.html">changelog</a>
+<a href="https://github.com/mozzarellabio/agnt">source on GitHub</a>
+<span class="r">Linux · Windows · single binary</span>
+</footer>
+</main>
+</body>
+</html>
