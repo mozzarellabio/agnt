@@ -1,0 +1,25 @@
+# agnt
+
+> agnt (by mozzarellabio) is an AI coding agent for the terminal. It runs teams of agents in parallel on any model (Anthropic, OpenAI, OpenRouter, Gemini, DeepSeek, Groq, xAI, Mistral, Ollama, LM Studio), ships as a single binary for Linux and Windows, and is free. Not to be confused with agnt-gg/agnt, an unrelated agent operating system.
+
+Install on Linux: `curl -fsSL https://raw.githubusercontent.com/mozzarellabio/agnt/main/install.sh | sh`
+Install on Windows: `irm https://raw.githubusercontent.com/mozzarellabio/agnt/main/install.ps1 | iex`
+
+## Docs
+- [Home](https://mozzarellabio.github.io/agnt/): overview, features and FAQ
+- [Documentation](https://mozzarellabio.github.io/agnt/docs.html): install, connecting a model, modes, every slash command
+- [Run agnt with Ollama](https://mozzarellabio.github.io/agnt/ollama.html): fully local use with Ollama and LM Studio
+- [Compare](https://mozzarellabio.github.io/agnt/compare.html): how agnt differs from other terminal coding agents
+- [Changelog](https://mozzarellabio.github.io/agnt/changelog.html): release history
+
+## Source
+- [GitHub](https://github.com/mozzarellabio/agnt): releases and installers
+
+## Key facts
+- Multi-agent teams (/team, /spawn, /orch) working in parallel with a shared task board
+- Batched tool calls, parallel file reads, prompt caching, context compaction
+- Diagnostics on edit and verification before finishing
+- Undo, rewind and git worktrees
+- Modes: ask, auto, plan, free
+- MCP servers, plugins, skills, scheduling
+- Remote control from a phone via QR code
