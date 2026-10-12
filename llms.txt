@@ -15,8 +15,8 @@ Install on Windows: `irm https://raw.githubusercontent.com/mozzarellabio/agnt/ma
 - [Compare](https://mozzarellabio.github.io/agnt/compare.html): how agnt differs from other terminal coding agents
 - [Changelog](https://mozzarellabio.github.io/agnt/changelog.html): release history
 
-## Source
-- [GitHub](https://github.com/mozzarellabio/agnt): releases and installers
+## Downloads
+- [GitHub](https://github.com/mozzarellabio/agnt): releases and installers (closed source)
 
 ## Key facts
 - Multi-agent teams (/team, /spawn, /orch) working in parallel with a shared task board
