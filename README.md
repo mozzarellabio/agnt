@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="assets/img/og.png" alt="agnt: agent orchestras in your terminal" width="100%">
 
-<pre>
+```
                      __
   ____ _____ _____  / /_
  / __ `/ __ `/ __ \/ __/
 / /_/ / /_/ / / / / /_
 \__,_/\__, /_/ /_/\__/
      /____/
-</pre>
+```
+
 
 **AI coding agent for your terminal. Teams of agents in parallel, on any model.**
 
