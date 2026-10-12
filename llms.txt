@@ -7,6 +7,9 @@ Install on Windows: `irm https://raw.githubusercontent.com/mozzarellabio/agnt/ma
 
 ## Docs
 - [Home](https://mozzarellabio.github.io/agnt/): overview, features and FAQ
+- [What is agnt](https://mozzarellabio.github.io/agnt/what-is-agnt.html): definition and disambiguation
+- [Multi-agent coding](https://mozzarellabio.github.io/agnt/multi-agent-coding.html): parallel agent teams
+- [Any-model agent](https://mozzarellabio.github.io/agnt/free-claude-code-alternative.html): free, bring your own key or run local
 - [Documentation](https://mozzarellabio.github.io/agnt/docs.html): install, connecting a model, modes, every slash command
 - [Run agnt with Ollama](https://mozzarellabio.github.io/agnt/ollama.html): fully local use with Ollama and LM Studio
 - [Compare](https://mozzarellabio.github.io/agnt/compare.html): how agnt differs from other terminal coding agents
