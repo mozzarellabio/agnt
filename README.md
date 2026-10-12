@@ -1,14 +1,7 @@
 <div align="center">
 
 
-```
-                     __
-  ____ _____ _____  / /_
- / __ `/ __ `/ __ \/ __/
-/ /_/ / /_/ / / / / /_
-\__,_/\__, /_/ /_/\__/
-     /____/
-```
+<img src="assets/img/banner.svg" alt="agnt" width="460">
 
 
 **AI coding agent for your terminal. Teams of agents in parallel, on any model.**
