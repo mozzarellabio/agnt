@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="assets/img/og.png" alt="agnt: agent orchestras in your terminal" width="100%">
-
 # agnt
 
 **AI coding agent for your terminal. Teams of agents in parallel, on any model.**
