@@ -17,6 +17,10 @@
 
 <br>
 
+<img src="assets/img/demo.gif" alt="Illustrative animation: /team squad runs four agents in parallel, then typecheck and tests" width="100%">
+
+<br>
+
 <img src="assets/img/agnt-terminal.png" alt="agnt running in a terminal" width="100%">
 
 <br>
